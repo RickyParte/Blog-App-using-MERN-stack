@@ -6,7 +6,9 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(cors());app.use(cors({
+    origin: 'http://3.111.139.9:3001'
+}));
 
 app.set("view engine", "ejs");
 app.use(express.json());
